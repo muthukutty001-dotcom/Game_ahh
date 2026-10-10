@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sugar Rush</title>
+  <meta name="description" content="A Candy Crush-style match-3 game.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="hud">
+      <h1 class="title">Sugar Rush</h1>
+      <div class="stats">
+        <div class="stat"><span class="label">Level</span><span class="value" id="level">1</span></div>
+        <div class="stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+        <div class="stat"><span class="label">Moves</span><span class="value" id="moves">20</span></div>
+      </div>
+      <div class="goal">
+        <div class="goal-text">Target <span id="target">0</span></div>
+        <div class="progress"><div class="progress-fill" id="progress"></div></div>
+      </div>
+    </header>
+
+    <div class="board-wrap">
+      <div class="board" id="board" aria-label="Game board"></div>
+      <div class="toast" id="toast" aria-live="polite"></div>
+    </div>
+
+    <footer class="controls">
+      <button type="button" class="btn ghost" id="hint-btn">Hint</button>
+      <button type="button" class="btn ghost" id="restart-btn">Restart level</button>
+    </footer>
+    <p class="help">Swipe or tap two neighbouring candies to swap them. Match 3 or more.
+      Match 4 for a striped candy, an L or T for a wrapped candy, and 5 for a color bomb.</p>
+  </main>
+
+  <div class="overlay" id="overlay" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-text"></p>
+      <button type="button" class="btn" id="dialog-btn"></button>
+    </div>
+  </div>
+
+  <script src="src/board.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

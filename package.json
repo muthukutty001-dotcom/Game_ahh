@@ -1,0 +1,9 @@
+{
+  "name": "game-ahh",
+  "version": "1.0.0",
+  "description": "A Candy Crush-style match-3 game in plain HTML, CSS and JavaScript",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}
